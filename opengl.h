@@ -5,7 +5,8 @@
 #include <QOpenGLWidget>
 #include <QOpenGLContext>
 #include <QTimer>
-
+#include <QMatrix4x4>
+#include <QVector3D>
 
 #include <QMouseEvent>
 #include <QKeyEvent>
@@ -20,12 +21,16 @@ protected:
     void	paintGL();
     void    resizeGL(int w,int h);
 
-    void mousePressEvent(QMouseEvent *event);
-    void keyPressEvent(QKeyEvent *event);
+    void mousePressEvent(QMouseEvent *e);
+    void mouseMoveEvent(QMouseEvent *e);
+    void keyPressEvent(QKeyEvent *e);
 private:
 	QTimer *fps;
-
+    QOpenGLContext *c1,*c2,*c3;
     Sprite *background,*test_3d,*ground;
+
+    GLfloat dx,dy,dz;
+
 };
 
 #endif // OPENGL_H

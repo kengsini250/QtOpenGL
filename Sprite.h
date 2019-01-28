@@ -10,7 +10,6 @@
 #include <QVector2D>
 #include <QVector3D>
 
-
 class Sprite : protected QOpenGLFunctions
 {	
 public:
@@ -19,14 +18,10 @@ public:
     Sprite(QString pic);//ground
     ~Sprite();
     void Draw();
-    void Draw_Ground();
-    void Draw_3D();
+    void Draw_Ground(QMatrix4x4 m);
+    void Draw_3D(QMatrix4x4 m);
 
-    void GoFront(float d);
-    void GoBack(float d);
-    void GoLeft(float d);
-    void GoRight(float d);
-
+    void setSpeed(float s){angle=s;}
 private:
 
     void Init_Vbo_Ebo();
