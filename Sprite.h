@@ -19,7 +19,7 @@ public:
     ~Sprite();
     void Draw();
     void Draw_Ground(QMatrix4x4 m);
-    void Draw_3D(QMatrix4x4 m);
+    void Draw_Box(QMatrix4x4 m);
 
     void setSpeed(float s){angle=s;}
 private:
@@ -32,7 +32,6 @@ private:
     void Init_Matrix();
     void Init_Matrix_Ground();
     void Init_Matrix_Box();
-    void Init_Matrix_3D();
 
     QOpenGLBuffer vbo, ebo;
     QOpenGLShaderProgram shader;

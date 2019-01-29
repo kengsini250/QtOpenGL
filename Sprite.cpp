@@ -196,29 +196,17 @@ void Sprite::Init_Matrix()
 
 void Sprite::Init_Matrix_Ground()
 {
-    matrix.perspective(45.0f,WIN_X/WIN_Y,0.1f,100.0f);
-
     matrix.scale(8.0f,4.0f,0.7f);
-    matrix.translate(QVector3D(-0.5,-0.5f,-4.0f));
+    matrix.translate(QVector3D(-0.5,-0.6f,-3.0f));
     matrix.rotate(-70.0f,1.0f,0.0f,0.0f);
 }
 
 void Sprite::Init_Matrix_Box()
 {
-    matrix.perspective(45.0f,WIN_X/WIN_Y,0.1f,100.0f);
-
     matrix.translate(QVector3D(x1,y1,-z1));
     matrix.rotate(angle_x,1.0f,0.0f,0.0f);//X
     matrix.rotate(angle_y,0.0f,1.0f,0.0f);//Y
     matrix.rotate(angle_z,0.0f,0.0f,1.0f);//Z
-}
-
-void Sprite::Init_Matrix_3D()
-{
-    matrix.perspective(45.0f,WIN_X/WIN_Y,0.1f,100.0f);
-
-    matrix.translate(QVector3D(0,0,-3.0f));
-    matrix.rotate(-60.0f,1.0f,1.0f,0.0f);
 }
 
 void Sprite::Draw()
@@ -263,7 +251,7 @@ void Sprite::Draw_Ground(QMatrix4x4 m)
     glDrawElements(GL_TRIANGLES,6,GL_UNSIGNED_SHORT,nullptr);
 }
 
-void Sprite::Draw_3D(QMatrix4x4 m)
+void Sprite::Draw_Box(QMatrix4x4 m)
 {
     matrix.rotate(angle,1.0f,0.0f,0.0f);//X
     matrix.rotate(angle-0.3f,0.0f,1.0f,0.0f);//Y

@@ -6,5 +6,6 @@
         <file>pic/ground.jpg</file>
         <file>pic/sky.jpg</file>
         <file>pic/box.png</file>
+        <file>pic/test.png</file>
     </qresource>
 </RCC>

@@ -28,8 +28,9 @@ private:
 	QTimer *fps;
     QOpenGLContext *c1,*c2,*c3;
     Sprite *background,*test_3d,*ground;
+    Sprite *box1,*box2,*box3,*box4,*box5,*box6;
 
-    GLfloat dx,dy,dz;
+    GLfloat dx,dy,dz,mx,my;
 
 };
 
