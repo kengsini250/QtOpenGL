@@ -25,13 +25,13 @@ protected:
     void mouseMoveEvent(QMouseEvent *e);
     void keyPressEvent(QKeyEvent *e);
 private:
+    QMatrix4x4 m;
 	QTimer *fps;
     QOpenGLContext *c1,*c2,*c3;
     Sprite *background,*test_3d,*ground;
     Sprite *box1,*box2,*box3,*box4,*box5,*box6;
 
-    GLfloat dx,dy,dz,mx,my;
-
+    GLfloat dx,dz;
 };
 
 #endif // OPENGL_H

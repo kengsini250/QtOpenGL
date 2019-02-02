@@ -197,7 +197,7 @@ void Sprite::Init_Matrix()
 void Sprite::Init_Matrix_Ground()
 {
     matrix.scale(8.0f,4.0f,0.7f);
-    matrix.translate(QVector3D(-0.5,-0.6f,-3.0f));
+    matrix.translate(QVector3D(-0.5,-0.6f,-7.0f));
     matrix.rotate(-70.0f,1.0f,0.0f,0.0f);
 }
 
@@ -253,9 +253,9 @@ void Sprite::Draw_Ground(QMatrix4x4 m)
 
 void Sprite::Draw_Box(QMatrix4x4 m)
 {
-    matrix.rotate(angle,1.0f,0.0f,0.0f);//X
-    matrix.rotate(angle-0.3f,0.0f,1.0f,0.0f);//Y
-    matrix.rotate(angle+0.2f,0.0f,0.0f,1.0f);//Z
+//    matrix.rotate(angle,1.0f,0.0f,0.0f);//X
+//    matrix.rotate(angle-0.3f,0.0f,1.0f,0.0f);//Y
+//    matrix.rotate(angle+0.2f,0.0f,0.0f,1.0f);//Z
 
     texture->bind();
 

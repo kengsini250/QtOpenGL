@@ -16,6 +16,7 @@ public:
     Sprite(QString pic,float _x,float _y,float _angle);//background
     Sprite(QString pic,float _x,float _y,float _z,float _angle_x,float _angle_y,float _angle_z);//box
     Sprite(QString pic);//ground
+
     ~Sprite();
     void Draw();
     void Draw_Ground(QMatrix4x4 m);
